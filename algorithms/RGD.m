@@ -53,6 +53,10 @@ omega_2d = zeros(m,2);
 [omega_2d(:,1), omega_2d(:,2)] = ind2sub([n1,n2],omega);
 omega_row = omega_2d(:,1); omega_col = omega_2d(:,2);
 
+%% make sure A, B are orthonormal
+[A, ~, ~] = svd(A,'econ');
+[B, ~, ~] = svd(B,'econ');
+
 %% initialize U and V (of sizes d1 x r and d2 x r)
 if opts.init_option == 0
     % initialization by rank-r SVD of observed matrix
