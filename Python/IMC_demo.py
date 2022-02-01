@@ -33,7 +33,7 @@ def run_demo():
     # calculate full matrix, mask and corresponding observed matrix
     p = oversampling_ratio * rank * (d1 + d2 - rank) / (n1 * n2)
     X0, A, B = generate_matrix(n1, n2, d1, d2, singular_values)
-    omega = generate_mask(n1, n2, rank, p)
+    omega = generate_mask(n1, n2, p)
     X = X0 * omega
     
     # run GNIMC
