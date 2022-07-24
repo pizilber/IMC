@@ -3,9 +3,13 @@ In the IMC problem, the goal is to recover a low rank matrix X* from few observe
 its row and column subspaces. The prior knowledge is given in the form of two matrices A, B.
 
 This repository contains `Matlab` and `Python` implementations for three IMC algrithms:
-* `GNIMC`: Gauss-Newton IMC, as described in [P. Zilber and B. Nadler (preprint, 2022)](https://arxiv.org/abs/2201.13052)
+* `GNIMC`: Gauss-Newton IMC, as described in the [ICML 2022 paper](https://proceedings.mlr.press/v162/zilber22a/zilber22a.pdf) or the [arXiv version](https://arxiv.org/abs/2201.13052)
 * `AltMin`: alternating minimization
 * `RGD`: (balance-regularized) gradient descent.
+
+## Video
+Our work was presented as an [ICML 2022 spotlight video](https://icml.cc/virtual/2022/spotlight/17496).
+This 5-minutes video includes an introduction to the IMC problem, and describes our theoretical contributions to the IMC problem (independently of `GNIMC`) as well as our `GNIMC` method to solve IMC.
 
 ## Usage
 Simple demos demonstrating the usage of the algorithms are available, see `IMC_demo.m` and `IMC_demo.py`.
@@ -23,11 +27,12 @@ Given these configurations, the demo generates a matrix using `generate_matrix.m
 ## Citation
 If you refer to the `GNIMC` method or the paper, please cite them as:
 ```
-@article{zilber2022inductive,
-      title={Inductive Matrix Completion: No Bad Local Minima and a Fast Algorithm}, 
-      author={Pini Zilber and Boaz Nadler},
-      year={2022},
-      eprint={2201.13052},
-      archivePrefix={arXiv},
+@inproceedings{zilber2022inductive,
+  title={Inductive Matrix Completion: No Bad Local Minima and a Fast Algorithm},
+  author={Zilber, Pini and Nadler, Boaz},
+  booktitle={International Conference on Machine Learning},
+  pages={27671--27692},
+  year={2022},
+  organization={PMLR}
 }
 ```
